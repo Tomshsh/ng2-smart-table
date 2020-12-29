@@ -8,6 +8,7 @@ import { DataSource } from '../../lib/data-source/data-source';
   styleUrls: ['./pager.component.scss'],
   template: `
     <nav *ngIf="shouldShow()" class="ng2-smart-pagination-nav">
+      <button nbButton >Hi</button>
       <ul class="ng2-smart-pagination pagination">
         <li class="ng2-smart-page-item page-item" [ngClass]="{disabled: getPage() == 1}">
           <a class="ng2-smart-page-link page-link" href="#"
@@ -39,7 +40,7 @@ import { DataSource } from '../../lib/data-source/data-source';
             <span class="sr-only">Next</span>
           </a>
         </li>
-        
+
         <li class="ng2-smart-page-item page-item"
         [ngClass]="{disabled: getPage() == getLast()}">
           <a class="ng2-smart-page-link page-link" href="#"
@@ -50,7 +51,7 @@ import { DataSource } from '../../lib/data-source/data-source';
         </li>
       </ul>
     </nav>
-    
+
     <nav *ngIf="perPageSelect && perPageSelect.length > 0" class="ng2-smart-pagination-per-page">
       <label for="per-page">
         Per Page:
